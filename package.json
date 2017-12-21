@@ -4,6 +4,14 @@
   "eggPlugin": {
     "name": "validator"
   },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "egg-validator",
+    "egg-joi",
+    "joi"
+  ],
   "scripts": {
     "test": "egg-bin test",
     "cov": "egg-bin cov"

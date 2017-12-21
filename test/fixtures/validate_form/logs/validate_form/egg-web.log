@@ -1,12 +1,12 @@
-2017-12-21 15:09:37,927 INFO 712 [egg:logger] init all loggers with options: {"dir":"/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/logs/validate_form","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","disableConsoleAfterReady":false,"outputJSON":false,"buffer":false,"appLogName":"validate_form-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"allowDebugAtProd":true,"type":"application"}
-2017-12-21 15:09:37,930 INFO 712 [egg-schedule]: register schedule /Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-logrotator/app/schedule/clean_log.js
-2017-12-21 15:09:37,930 INFO 712 [egg-schedule]: register schedule /Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
-2017-12-21 15:09:37,938 INFO 712 [egg-static] starting static serve /public/ -> /Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/app/public
-2017-12-21 15:09:37,938 INFO 712 [egg-security] use methodnoallow middleware
-2017-12-21 15:09:37,938 INFO 712 [egg-security] use noopen middleware
-2017-12-21 15:09:37,938 INFO 712 [egg-security] use nosniff middleware
-2017-12-21 15:09:37,938 INFO 712 [egg-security] use xssProtection middleware
-2017-12-21 15:09:37,938 INFO 712 [egg-security] use xframe middleware
-2017-12-21 15:09:37,938 INFO 712 [egg-security] use dta middleware
-2017-12-21 15:09:37,938 INFO 712 [egg-security] compose 6 middlewares into one security middleware
-2017-12-21 15:09:37,949 INFO 712 [egg-watcher:app] watcher start success
+2017-12-21 15:26:30,870 INFO 2847 [egg:logger] init all loggers with options: {"dir":"/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/logs/validate_form","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","disableConsoleAfterReady":false,"outputJSON":false,"buffer":false,"appLogName":"validate_form-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"allowDebugAtProd":true,"type":"application"}
+2017-12-21 15:26:30,875 INFO 2847 [egg-schedule]: register schedule /Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-12-21 15:26:30,875 INFO 2847 [egg-schedule]: register schedule /Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-12-21 15:26:30,883 INFO 2847 [egg-static] starting static serve /public/ -> /Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/app/public
+2017-12-21 15:26:30,884 INFO 2847 [egg-security] use methodnoallow middleware
+2017-12-21 15:26:30,884 INFO 2847 [egg-security] use noopen middleware
+2017-12-21 15:26:30,884 INFO 2847 [egg-security] use nosniff middleware
+2017-12-21 15:26:30,885 INFO 2847 [egg-security] use xssProtection middleware
+2017-12-21 15:26:30,885 INFO 2847 [egg-security] use xframe middleware
+2017-12-21 15:26:30,885 INFO 2847 [egg-security] use dta middleware
+2017-12-21 15:26:30,885 INFO 2847 [egg-security] compose 6 middlewares into one security middleware
+2017-12-21 15:26:30,947 INFO 2847 [egg-watcher:app] watcher start success

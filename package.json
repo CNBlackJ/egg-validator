@@ -1,5 +1,21 @@
 {
+  "name": "egg-validator",
+  "version": "1.0.0",
   "eggPlugin": {
     "name": "validator"
+  },
+  "scripts": {
+    "test": "egg-bin test",
+    "cov": "egg-bin cov"
+  },
+  "author": "vinli",
+  "license": "ISC",
+  "devDependencies": {
+    "egg": "^2.1.0",
+    "egg-bin": "^4.3.7",
+    "egg-mock": "^3.14.0"
+  },
+  "dependencies": {
+    "joi": "^13.0.2"
   }
 }

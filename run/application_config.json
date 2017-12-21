@@ -4,16 +4,32 @@
       "maxAge": 86400000,
       "key": "EGG_SESS",
       "httpOnly": true,
-      "encrypt": true
+      "encrypt": true,
+      "overwrite": true,
+      "signed": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function anonymous>"
     },
     "security": {
       "domainWhiteList": [],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
-      "csrf": false,
+      "csrf": {
+        "enable": true,
+        "useSession": false,
+        "ignoreJSON": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "matching": "<Function anonymous>"
+      },
       "xframe": {
         "enable": true,
-        "value": "SAMEORIGIN"
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
       },
       "hsts": {
         "enable": false,
@@ -21,26 +37,30 @@
         "includeSubdomains": false
       },
       "dta": {
-        "enable": true
+        "enable": true,
+        "matching": "<Function anonymous>"
       },
       "methodnoallow": {
-        "enable": true
+        "enable": true,
+        "matching": "<Function anonymous>"
       },
       "noopen": {
-        "enable": true
+        "enable": true,
+        "matching": "<Function anonymous>"
       },
       "nosniff": {
-        "enable": true
+        "enable": true,
+        "matching": "<Function anonymous>"
       },
       "xssProtection": {
         "enable": true,
-        "value": "1; mode=block"
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
       },
       "csp": {
         "enable": false,
         "policy": {}
-      },
-      "ctoken": false
+      }
     },
     "helper": {
       "shtml": {}
@@ -59,10 +79,28 @@
     },
     "i18n": {
       "defaultLocale": "en_US",
-      "dirs": [],
+      "dirs": [
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-jsonp/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-onerror/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-i18n/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-watcher/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-multipart/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-schedule/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-logrotator/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-static/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-view/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-mock/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-mock/lib/tmp/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/config/locales"
+      ],
       "queryField": "locale",
       "cookieField": "locale",
-      "cookieMaxAge": "1y"
+      "cookieMaxAge": "1y",
+      "functionName": "__"
     },
     "watcher": {
       "type": "development",
@@ -75,9 +113,9 @@
       "autoFields": false,
       "defaultCharset": "utf8",
       "fieldNameSize": 100,
-      "fieldSize": "100kb",
+      "fieldSize": 102400,
       "fields": 10,
-      "fileSize": "10mb",
+      "fileSize": 10485760,
       "files": 10,
       "fileExtensions": [],
       "whitelist": null
@@ -93,32 +131,51 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/app/public",
+      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/app/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
-      "maxFiles": 1000
+      "maxFiles": 1000,
+      "files": "<LRU>"
     },
     "view": {
-      "root": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/app/view",
+      "root": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/app/view",
       "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
       "mapping": {}
     },
     "env": "unittest",
-    "name": "validate_form",
+    "name": "egg-validator",
     "keys": "<String len: 0>",
     "proxy": false,
     "protocolHeaders": "x-forwarded-proto",
     "ipHeaders": "x-forwarded-for",
     "hostHeaders": "x-forwarded-host",
     "pkg": {
-      "name": "validate_form"
+      "name": "egg-validator",
+      "version": "1.0.0",
+      "eggPlugin": {
+        "name": "validator"
+      },
+      "scripts": {
+        "test": "egg-bin test",
+        "cov": "egg-bin cov"
+      },
+      "author": "vinli",
+      "license": "ISC",
+      "devDependencies": {
+        "egg": "^2.1.0",
+        "egg-bin": "^4.3.7",
+        "egg-mock": "^3.14.0"
+      },
+      "dependencies": {
+        "joi": "^13.0.2"
+      }
     },
-    "baseDir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form",
+    "baseDir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator",
     "HOME": "/Users/black_j",
-    "rundir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/run",
+    "rundir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -145,10 +202,11 @@
         "arrayLimit": 100,
         "depth": 5,
         "parameterLimit": 1000
-      }
+      },
+      "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/logs/validate_form",
+      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/logs/egg-validator",
       "encoding": "utf8",
       "env": "unittest",
       "level": "INFO",
@@ -156,13 +214,13 @@
       "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": false,
-      "appLogName": "validate_form-web.log",
+      "appLogName": "egg-validator-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
       "coreLogger": {},
       "allowDebugAtProd": true,
-      "type": "agent"
+      "type": "application"
     },
     "httpclient": {
       "enableDNSCache": false,
@@ -188,8 +246,13 @@
       "meta",
       "siteFile",
       "notfound",
+      "static",
       "bodyParser",
-      "overrideMethod"
+      "overrideMethod",
+      "session",
+      "clusterAppMock",
+      "securities",
+      "i18n"
     ],
     "workerStartTimeout": 600000,
     "cluster": {
@@ -206,11 +269,28 @@
       "meta",
       "siteFile",
       "notfound",
+      "static",
       "bodyParser",
-      "overrideMethod"
+      "overrideMethod",
+      "session",
+      "clusterAppMock",
+      "securities",
+      "i18n"
     ],
     "appMiddlewares": [],
-    "appMiddleware": []
+    "appMiddleware": [],
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 10485760,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
   },
   "plugins": {
     "session": {
@@ -342,16 +422,6 @@
       "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-view",
       "version": "2.0.0"
     },
-    "validator": {
-      "enable": true,
-      "name": "validator",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator",
-      "version": "1.0.0"
-    },
     "egg-mock": {
       "enable": true,
       "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-mock",
@@ -360,6 +430,15 @@
       "optionalDependencies": [],
       "env": [],
       "version": "3.14.0"
+    },
+    "validator": {
+      "enable": true,
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator",
+      "name": "validator",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "version": "1.0.0"
     }
   }
 }

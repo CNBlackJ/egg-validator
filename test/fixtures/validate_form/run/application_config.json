@@ -1,9 +1,5 @@
 {
   "config": {
-    "onerror": {
-      "errorPageUrl": "",
-      "appErrorFilter": null
-    },
     "session": {
       "maxAge": 86400000,
       "key": "EGG_SESS",
@@ -14,49 +10,6 @@
       "encode": "<Function encode>",
       "decode": "<Function decode>",
       "genid": "<Function anonymous>"
-    },
-    "i18n": {
-      "defaultLocale": "en_US",
-      "dirs": [
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-onerror/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-session/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-i18n/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-watcher/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-multipart/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-security/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-schedule/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-logrotator/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-static/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-jsonp/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-view/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-mock/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-mock/lib/tmp/config/locales",
-        "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/config/locales"
-      ],
-      "queryField": "locale",
-      "cookieField": "locale",
-      "cookieMaxAge": "1y",
-      "functionName": "__"
-    },
-    "watcher": {
-      "type": "development",
-      "eventSources": {
-        "default": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-watcher/lib/event-sources/development"
-      }
-    },
-    "multipart": {
-      "autoFields": false,
-      "defaultCharset": "utf8",
-      "fieldNameSize": 100,
-      "fieldSize": 102400,
-      "fields": 10,
-      "fileSize": 10485760,
-      "files": 10,
-      "fileExtensions": [],
-      "whitelist": null
     },
     "security": {
       "domainWhiteList": [],
@@ -103,6 +56,61 @@
     "helper": {
       "shtml": {}
     },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-jsonp/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-onerror/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-i18n/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-watcher/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-multipart/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-schedule/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-logrotator/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-static/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-view/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-mock/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-mock/lib/tmp/config/locales",
+        "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/config/locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "multipart": {
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null
+    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -114,23 +122,15 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/app/public",
+      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/app/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000,
       "files": "<LRU>"
     },
-    "jsonp": {
-      "limit": 50,
-      "callback": [
-        "_callback",
-        "callback"
-      ],
-      "csrf": false
-    },
     "view": {
-      "root": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/app/view",
+      "root": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/app/view",
       "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -146,9 +146,9 @@
     "pkg": {
       "name": "validate_form"
     },
-    "baseDir": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form",
+    "baseDir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form",
     "HOME": "/Users/black_j",
-    "rundir": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/run",
+    "rundir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -179,7 +179,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/logs/validate_form",
+      "dir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/logs/validate_form",
       "encoding": "utf8",
       "env": "unittest",
       "level": "INFO",
@@ -223,9 +223,9 @@
       "bodyParser",
       "overrideMethod",
       "session",
-      "i18n",
       "clusterAppMock",
-      "securities"
+      "securities",
+      "i18n"
     ],
     "workerStartTimeout": 600000,
     "cluster": {
@@ -246,9 +246,9 @@
       "bodyParser",
       "overrideMethod",
       "session",
-      "i18n",
       "clusterAppMock",
-      "securities"
+      "securities",
+      "i18n"
     ],
     "appMiddlewares": [],
     "appMiddleware": [],
@@ -266,17 +266,6 @@
     }
   },
   "plugins": {
-    "onerror": {
-      "enable": true,
-      "package": "egg-onerror",
-      "name": "onerror",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-onerror",
-      "version": "1.5.0"
-    },
     "session": {
       "enable": true,
       "package": "egg-session",
@@ -284,42 +273,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-session",
-      "version": "2.1.1"
-    },
-    "i18n": {
-      "enable": true,
-      "package": "egg-i18n",
-      "name": "i18n",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-i18n",
-      "version": "1.2.0"
-    },
-    "watcher": {
-      "enable": true,
-      "package": "egg-watcher",
-      "name": "watcher",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-watcher",
-      "version": "2.2.0"
-    },
-    "multipart": {
-      "enable": true,
-      "package": "egg-multipart",
-      "name": "multipart",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-multipart",
-      "version": "1.5.1"
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session",
+      "version": "3.0.0"
     },
     "security": {
       "enable": true,
@@ -330,44 +286,9 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-security",
-      "version": "1.12.1"
-    },
-    "schedule": {
-      "enable": true,
-      "package": "egg-schedule",
-      "name": "schedule",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-schedule",
-      "version": "2.6.0"
-    },
-    "logrotator": {
-      "enable": true,
-      "package": "egg-logrotator",
-      "name": "logrotator",
-      "dependencies": [
-        "schedule"
-      ],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-logrotator",
-      "version": "2.3.0"
-    },
-    "static": {
-      "enable": true,
-      "package": "egg-static",
-      "name": "static",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-static",
-      "version": "1.4.1"
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security",
+      "version": "2.0.0"
     },
     "jsonp": {
       "enable": true,
@@ -378,9 +299,90 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-jsonp",
-      "version": "1.2.2"
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-onerror",
+      "version": "2.0.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-i18n",
+      "version": "2.0.0"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-watcher",
+      "version": "3.0.0"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-multipart",
+      "version": "2.0.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-schedule",
+      "version": "3.1.1"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-logrotator",
+      "version": "3.0.1"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-static",
+      "version": "2.0.0"
     },
     "view": {
       "enable": true,
@@ -389,27 +391,28 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg/config/plugin.js",
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-view",
-      "version": "1.1.2"
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-view",
+      "version": "2.0.0"
     },
     "validator": {
       "enable": true,
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator",
       "name": "validator",
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/app/lib/plugin/egg-validator/test/fixtures/validate_form/config/plugin.js"
+      "from": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/config/plugin.js",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator",
+      "version": "1.0.0"
     },
     "egg-mock": {
       "enable": true,
-      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/startegg/node_modules/egg-mock",
+      "path": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-mock",
       "name": "egg-mock",
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "version": "3.13.1"
+      "version": "3.14.0"
     }
   }
 }

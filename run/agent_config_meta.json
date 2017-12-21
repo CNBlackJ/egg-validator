@@ -1,10 +1,24 @@
 {
+  "session": {
+    "maxAge": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js"
+  },
   "security": {
-    "ctoken": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/config/config.js",
-    "csrf": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/test/fixtures/validate_form/config/config.js",
     "domainWhiteList": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
     "protocolWhiteList": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
     "defaultMiddleware": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js"
+    },
     "xframe": {
       "enable": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
       "value": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js"
@@ -34,12 +48,6 @@
       "enable": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js",
       "policy": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js"
     }
-  },
-  "session": {
-    "maxAge": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js",
-    "key": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js",
-    "httpOnly": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js",
-    "encrypt": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-session/config/config.default.js"
   },
   "helper": {
     "shtml": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg-security/config/config.default.js"
@@ -110,7 +118,25 @@
   "ipHeaders": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
   "hostHeaders": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
   "pkg": {
-    "name": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js"
+    "name": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+    "version": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+    "eggPlugin": {
+      "name": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "test": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+      "cov": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+    "license": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+    "devDependencies": {
+      "egg": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
+      "egg-mock": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "joi": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js"
+    }
   },
   "baseDir": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",
   "HOME": "/Users/black_j/Projects/nodejs/eggjsdemo/egg-validator/node_modules/egg/config/config.default.js",

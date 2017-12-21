@@ -1,6 +1,6 @@
 'use strict';
 
-const { app, mm, assert } = require('egg-mock/bootstrap');
+const { mm, assert } = require('egg-mock/bootstrap');
 const path = require('path');
 
 describe('test/extend/context.test.js', () => {

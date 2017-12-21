@@ -1,6 +1,7 @@
 {
   "name": "egg-validator",
   "version": "1.0.0",
+  "description": "validate plugin for egg by joi",
   "eggPlugin": {
     "name": "validator"
   },
@@ -14,14 +15,18 @@
   ],
   "scripts": {
     "test": "egg-bin test",
-    "cov": "egg-bin cov"
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
   },
   "author": "vinli",
   "license": "ISC",
   "devDependencies": {
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
-    "egg-mock": "^3.14.0"
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.13.1",
+    "eslint-config-egg": "^5.1.1"
   },
   "dependencies": {
     "joi": "^13.0.2"

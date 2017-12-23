@@ -1,15 +1,14 @@
 {
-  "name": "egg-validator",
+  "name": "egg-joi",
   "version": "1.0.0",
   "description": "validate plugin for egg by joi",
   "eggPlugin": {
-    "name": "validator"
+    "name": "joi"
   },
   "keywords": [
     "egg",
     "egg-plugin",
     "eggPlugin",
-    "egg-validator",
     "egg-joi",
     "joi"
   ],
